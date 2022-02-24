@@ -12,7 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends ModularState<HomePage, HomeController> {
-
   late double width;
   late double height;
 
@@ -47,11 +46,11 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                   SizedBox(
                     height: height / 16,
                   ),
-                  nextPage(),
-                  SizedBox(
-                    height: height / 16,
-                  ),
                   addNewUserButton(),
+                  SizedBox(
+                    height: height / 8,
+                  ), 
+                  nextPage(),
                 ],
               ),
             ),
@@ -100,7 +99,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   Widget nextPage() {
     return Center(
       child: InkWell(
-        onTap: ()=>Modular.to.pushNamed(CONTACTLISTROUTE),
+        onTap: () => Modular.to.pushNamed(CONTACTLISTROUTE),
         child: Container(
           color: Colors.blue,
           width: width,
@@ -119,19 +118,17 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       child: TextButton(
         onPressed: () async {
           if (controller.formKey.currentState!.validate()) {
-
             await controller.internetVerification().then((value) {
-
               if (controller.isWithInternet) {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('User added')),);
+                  const SnackBar(content: Text('User added')),
+                );
                 controller.addUser();
-              }
-              else{
+              } else {
                 ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('No connection')),);
+                  const SnackBar(content: Text('No connection')),
+                );
               }
-              
             });
           }
         },
