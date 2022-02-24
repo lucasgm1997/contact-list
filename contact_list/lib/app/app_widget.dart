@@ -17,8 +17,7 @@ class _AppWidgetState extends State<AppWidget> {
     return MaterialApp.router(
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
-      
-      title: 'Flutter Slidy',
+      title: 'Contact List',
       theme: ThemeData(primarySwatch: Colors.blue),
     );
   }

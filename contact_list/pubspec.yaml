@@ -16,12 +16,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_modular: ^4.5.0
-  mobx: ^2.0.6+1
-  flutter_mobx: ^2.0.4
-
-dev_dependencies:
   cloud_firestore: ^3.1.8
   firebase_core: ^1.12.0
+
+dev_dependencies:
+  
   flutter_test:
     sdk: flutter
 
@@ -31,13 +30,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
-  mobx_codegen: ^2.0.5+2
   modular_test: ^1.0.1+1
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter.
 flutter:
 
   # The following line ensures that the Material Icons font is
